@@ -38,7 +38,7 @@ def create_kmeans_clusters(data: np.ndarray, n_clusters: int) -> np.ndarray:
 
     output: np.ndarray
     """
-    k = KMeans(n_clusters=n_clusters, random_state=42)
+    k = KMeans(n_clusters=n_clusters, random_state=42, n_init=10)
     labels = k.fit_predict(data)
     return labels
 
